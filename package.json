@@ -29,6 +29,7 @@
     "gulp-util": "3.0.8",
     "gulp-watch": "4.3.11",
     "gulp-webserver": "0.9.1",
-    "run-sequence": "2.2.0"
+    "run-sequence": "2.2.0",
+    "graceful-fs": "4.2.2"
   }
 }
