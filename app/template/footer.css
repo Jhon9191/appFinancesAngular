@@ -2,5 +2,9 @@
     position: fixed;
     bottom: 0px;
     width: 100%;
-    background-color: aqua;
+    background-color: rgb(1, 135, 212);
+}.main-footer strong{
+    color: rgb(233, 233, 233);
+}.main-footer a{
+    color: aliceblue;
 }
