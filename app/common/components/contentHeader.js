@@ -1,7 +1,7 @@
 angular.module('primeiraApp').component('contentHeader', {
     bindings: {
         name: '@',
-        small: "@",
+        small: '@',
     },
     template: `
         <section class="content-header">

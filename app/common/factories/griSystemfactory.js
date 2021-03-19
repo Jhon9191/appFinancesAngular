@@ -9,8 +9,10 @@ angular.module('primeiraApp').factory('gridSystem', [function () {
         if (cols[2]) classes += `col-md-${cols[2]}`
         if (cols[3]) classes += `col-lg-${cols[3]}`
 
-        return { toCssClasses } 
+        return classes
 
     }
+
+    return { toCssClasses } 
 
 }])
