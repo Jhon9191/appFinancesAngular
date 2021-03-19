@@ -6,16 +6,16 @@
     function DashboardController($http) {
         const vm = this;
         vm.getSummary = function(){
-            const url = 'http://localhost/api/billingCycles'
+            const url = 'http://localhost/api/billingSummary'
             $http.get(url).then(function(response){
-                const { credit = 0, debt = 0 } = response.data
-                vm.credit = credit
-                vm.debt = debt
-                vm.total = credit - debt
+                console.log(response.data.creditos)
+                const { creditos = 0, debitos = 0} = response.data
+                vm.creditos = creditos
+                vm.debitos = debitos
+                vm.total = creditos - debitos
             })
         }
     
-        return vm.getSummary()
+        vm.getSummary()
     }
-
 })()
