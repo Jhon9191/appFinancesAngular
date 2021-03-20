@@ -1,11 +1,8 @@
-<div class="form">
+<div role="form">
     <div class="box-body">
-        <div class="col-xs-12 col-sm-4">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input id="name" class="form-control" placeholder="Informe seu nome">
-            </div>
-        </div>
+        <form-component id="name" label="Name" grid="12 6 4" placeholder="Insira seu nome: "></form-component>
+        <form-component type="number" id="mes" label="Mês" grid="12 6 4" placeholder="Insira o mês: "></form-component>
+        <form-component type="number" id="ano" label="Ano" grid="12 6 4" placeholder="Insira o ano: "></form-component>
     </div>
     <div class="box-footer">
         <button class="btn btn-primary">Incluir</button>
