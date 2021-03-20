@@ -3,22 +3,22 @@
 <section class="content">
     <div class="nav-tabs-custom" ng-controller="BillingCyclesCtrl as bcCtrl">
         <ul class="nav nav-tabs">
-            <li>
+            <li ng-if="bcCtrl.tabList">
                 <a href data-target="#tabList" data-toggle="tab" >
                     <i class="fa fa-bars"></i> Lista
                 </a>
             </li>
-            <li>
+            <li ng-if="bcCtrl.tabCreate">
                 <a href data-target="#tabCreate" data-toggle="tab" >
                     <i class="fa fa-plus"></i> Incluir
                 </a>
             </li>
-            <li>
+            <li  ng-if="bcCtrl.tabUpdate">
                 <a href data-target="#tabUpdate" data-toggle="tab" >
                     <i class="fa fa-pencil"></i> Alterar
                 </a>
             </li>
-            <li>
+            <li  ng-if="bcCtrl.tabDelete">
                 <a href data-target="#tabDelete" data-toggle="tab" >
                     <i class="fa fa-trash-o"></i> Excluir
                 </a>
@@ -26,10 +26,10 @@
         </ul>
 
         <div class="tab-content">
-            <div class="tab-pane" id="tabList" ng-include="'billingCycles/list.html'"></div>
-            <div class="tab-pane" id="tabCreate" ng-include="'billingCycles/form.html'"></div>
-            <div class="tab-pane" id="tabUpdate" ng-include="'billingCycles/form.html'"></div>
-            <div class="tab-pane" id="tabDelete" ng-include="'billingCycles/form.html'"></div>
+            <div ng-if="bcCtrl.tabList" class="tab-pane" id="tabList" ng-include="'billingCycles/list.html'"></div>
+            <div ng-if="bcCtrl.tabCreate" class="tab-pane" id="tabCreate" ng-include="'billingCycles/form.html'"></div>
+            <div ng-if="bcCtrl.tabUpdate" class="tab-pane" id="tabUpdate" ng-include="'billingCycles/form.html'"></div>
+            <div ng-if="bcCtrl.tabDelete" class="tab-pane" id="tabDelete" ng-include="'billingCycles/form.html'"></div>
         </div>
 
     </div>
