@@ -11,19 +11,21 @@
 
         vm.refresh = function(){
             $http.get(url).then(function(response){
-                vm.billingCycle = {}
-                vm.billingCycle = response.data
+                vm.billingCycles = {}
+                vm.billingCycles = response.data
             })
-        },
+        }
 
 
         vm.create = function(){
-            $http.post(url, vm.billingCycle).then(function(response){
-                vm.billingCycle={}
+            $http.post(url, vm.billingCycles).then(function(response){
+                vm.billingCycles = {}
+                vm.refresh();
                 msgs.addSuccess('Operação realizada com sucesso!')
-            }).catch(function(E){
-                msgs.addError('Operação não pode ser realizada!')
+            }).catch(function(response){
+                msgs.addError(response.data.erros)
             })
         }
+        vm.refresh();
     }
 })()
