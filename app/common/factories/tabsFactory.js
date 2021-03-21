@@ -10,11 +10,11 @@
             tabDelete = false
         }) {
             owner.tabList = tabList,
-                owner.tabCreate = tabCreate,
-                owner.tabUpdate = tabUpdate,
-                owner.tabDelete = tabDelete
+            owner.tabCreate = tabCreate,
+            owner.tabUpdate = tabUpdate,
+            owner.tabDelete = tabDelete
         }
-        
+
         return { show }
     }
 })()
