@@ -6,6 +6,14 @@
         id="mes" label="Mês" grid="12 6 4" placeholder="Insira o mês: "></form-component>
         <form-component model="bcCtrl.billingCycle.year"  type="number"  readonly="bcCtrl.tabDelete"
         id="ano" label="Ano" grid="12 6 4" placeholder="Insira o ano: "></form-component>
+    
+        <div class="col-xs-12 col-lg-6">
+            <fieldset>
+                <legend>Créditos</legend>
+                <div ng-include="'billingCycles/creditlist.html'"></div>
+            </fieldset>
+        </div>  
+    
     </div>
     <div class="box-footer">
         <button ng-if="bcCtrl.tabCreate" class="btn btn-primary" ng-click="bcCtrl.create()">Incluir</button>
