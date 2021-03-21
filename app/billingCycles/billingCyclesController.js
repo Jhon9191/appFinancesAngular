@@ -39,11 +39,21 @@
             tabs.show(vm, { tabDelete: true })
         }
 
-        vm.delete = function(billingCycle){
+        vm.delete = function(){
             const deletUrl = `${url}/${vm.billingCycle._id}`
             $http.delete(deletUrl, vm.billingCycle).then(function(response){
                 vm.refresh();
                 msgs.addSuccess('Ciclo de pagamento excluido!')
+            }).catch(function(e){
+                msgs.addError(e)
+            })
+        }
+
+        vm.update = function(){
+            const putUrl = `${url}/${vm.billingCycle._id}`
+            $http.put(putUrl, vm.billingCycle).then(function(response){
+                vm.refresh();
+                msgs.addSuccess('Ciclo de pagamento atualizado!')
             }).catch(function(e){
                 msgs.addError(e)
             })
