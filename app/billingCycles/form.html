@@ -1,8 +1,11 @@
 <div role="form">
     <div class="box-body">
-        <form-component model="bcCtrl.billingCycle.name" id="name" label="Name" grid="12 6 4" placeholder="Insira seu nome: "></form-component>
-        <form-component model="bcCtrl.billingCycle.month" type="number" id="mes" label="Mês" grid="12 6 4" placeholder="Insira o mês: "></form-component>
-        <form-component model="bcCtrl.billingCycle.year"  type="number" id="ano" label="Ano" grid="12 6 4" placeholder="Insira o ano: "></form-component>
+        <form-component model="bcCtrl.billingCycle.name" id="name" readonly="bcCtrl.tabDelete"
+        label="Name" grid="12 6 4" placeholder="Insira seu nome: "></form-component>
+        <form-component model="bcCtrl.billingCycle.month" type="number"  readonly="bcCtrl.tabDelete"
+        id="mes" label="Mês" grid="12 6 4" placeholder="Insira o mês: "></form-component>
+        <form-component model="bcCtrl.billingCycle.year"  type="number"  readonly="bcCtrl.tabDelete"
+        id="ano" label="Ano" grid="12 6 4" placeholder="Insira o ano: "></form-component>
     </div>
     <div class="box-footer">
         <button ng-if="bcCtrl.tabCreate" class="btn btn-primary" ng-click="bcCtrl.create()">Incluir</button>
