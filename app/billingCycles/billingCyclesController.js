@@ -24,8 +24,8 @@
                 vm.billingCycles = {}
                 vm.refresh();
                 msgs.addSuccess('Operação realizada com sucesso!')
-            }).catch(function(response){
-                msgs.addError(response.data.erros)
+            }).catch(function(e){
+                msgs.addError(e)
             })
         }
 
@@ -37,6 +37,16 @@
         vm.showTabDelete = function(billingCycle){
             vm.billingCycle = billingCycle;
             tabs.show(vm, { tabDelete: true })
+        }
+
+        vm.delete = function(billingCycle){
+            const deletUrl = `${url}/${vm.billingCycle._id}`
+            $http.delete(deletUrl, vm.billingCycle).then(function(response){
+                vm.refresh();
+                msgs.addSuccess('Ciclo de pagamento excluido!')
+            }).catch(function(e){
+                msgs.addError(e)
+            })
         }
 
         vm.refresh();
