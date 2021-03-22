@@ -1,18 +1,19 @@
 <div role="form">
     <div class="box-body">
         <form-component model="bcCtrl.billingCycle.name" id="name" readonly="bcCtrl.tabDelete"
-        label="Name" grid="12 6 4" placeholder="Insira seu nome: "></form-component>
+        label="Name" grid="col-xs-12" placeholder="Insira seu nome: "></form-component>
         <form-component model="bcCtrl.billingCycle.month" type="number"  readonly="bcCtrl.tabDelete"
-        id="mes" label="Mês" grid="12 6 4" placeholder="Insira o mês: "></form-component>
+        id="mes" label="Mês" grid="col-xs-12" placeholder="Insira o mês: "></form-component>
         <form-component model="bcCtrl.billingCycle.year"  type="number"  readonly="bcCtrl.tabDelete"
-        id="ano" label="Ano" grid="12 6 4" placeholder="Insira o ano: "></form-component>
+        id="ano" label="Ano" grid="col-xs-12" placeholder="Insira o ano: "></form-component>
     
-        <div class="col-xs-12 col-lg-6">
+        <div class="col-xs-12 col-md-6">
             <fieldset>
-                <legend>Créditos</legend>
-                <div ng-include="'billingCycles/creditlist.html'"></div>
+              <legend>Créditos</legend>
+              <div ng-include="'billingCycles/creditList.html'">
+              </div>
             </fieldset>
-        </div>  
+          </div>
     
     </div>
     <div class="box-footer">

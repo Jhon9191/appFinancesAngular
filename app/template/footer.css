@@ -9,6 +9,12 @@
     color: aliceblue;
 }
 
+#toast-container{
+    top: 70px;
+}
+.table-actions{
+    width: 140px;
+}
 html { 
 background-color: #ecf0f5;
 }
