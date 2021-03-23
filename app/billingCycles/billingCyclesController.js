@@ -74,7 +74,19 @@
             }
         }
 
+        vm.addDebt = function (index) {
+            vm.billingCycle.debts.splice(index + 1, 0, {})
+        }
 
+        vm.cloneDebt = function (index, { name, value, status  }) {
+            vm.billingCycle.debts.splice(index + 1, 0, { name, value, status })
+        }
+
+        vm.deleteDebt = function (index) {
+            if (vm.billingCycle.debts.length > 1) {
+                vm.billingCycle.debts.splice(index , 1)
+            }
+        }
         vm.refresh();
     }
 })()
