@@ -1,5 +1,4 @@
-(function () {
-    angular.module('primeiraApp').component('formComponent', {
+ angular.module('primeiraApp').component('formComponent', {
         bindings: {
             id: '@',
             label: '@',
@@ -13,6 +12,7 @@
             'gridSystem',
             function (gridSystem) {
                 this.$onInit = () => this.gridClasses = gridSystem.toCssClasses(this.grid)
+                
             }
         ],
         template: `
@@ -24,4 +24,3 @@
         </div>
         `
     })
-})()

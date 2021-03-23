@@ -78,7 +78,7 @@
             vm.billingCycle.debts.splice(index + 1, 0, {})
         }
 
-        vm.cloneDebt = function (index, { name, value, status  }) {
+        vm.cloneDebt = function (index, { name, value, status }) {
             vm.billingCycle.debts.splice(index + 1, 0, { name, value, status })
         }
 
