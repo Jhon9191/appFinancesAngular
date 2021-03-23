@@ -7,10 +7,18 @@
         <form-component model="bcCtrl.billingCycle.year"  type="number"  readonly="bcCtrl.tabDelete"
         id="ano" label="Ano" grid="col-xs-12" placeholder="Insira o ano: "></form-component>
     
-        <div class="col-xs-12 col-md-6">
+        <div class="col-xs-12 col-sm-6">
             <fieldset>
               <legend>Créditos</legend>
               <div ng-include="'billingCycles/creditList.html'">
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="col-xs-12 col-sm-6">
+            <fieldset>
+              <legend>Débitos</legend>
+              <div ng-include="'billingCycles/debitList.html'">
               </div>
             </fieldset>
           </div>
