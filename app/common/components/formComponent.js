@@ -12,7 +12,6 @@
             'gridSystem',
             function (gridSystem) {
                 this.$onInit = () => this.gridClasses = gridSystem.toCssClasses(this.grid)
-                
             }
         ],
         template: `
