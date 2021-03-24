@@ -12,7 +12,7 @@
 
         vm.refresh = function () {
             $http.get(url).then(function (response) {
-                vm.billingCycle = { credits: [{}], debts: [{}] }
+                vm.billingCycle = { creditos: [{}], debitos: [{}] }
                 vm.billingCycles = response.data
                 vm.calculateValue()
                 tabs.show(vm, { tabList: true, tabCreate: true })
@@ -21,10 +21,9 @@
 
 
         vm.create = function () {
-            $http.post(url, vm.billingCycles).then(function (response) {
-                vm.billingCycles = {}
-                vm.refresh();
+            $http.post(url, vm.billingCycle).then(function (response) {
                 msgs.addSuccess('Operação realizada com sucesso!')
+                vm.refresh();
             }).catch(function (e) {
                 msgs.addError(e)
             })
@@ -45,8 +44,8 @@
         vm.delete = function () {
             const deletUrl = `${url}/${vm.billingCycle._id}`
             $http.delete(deletUrl, vm.billingCycle).then(function (response) {
-                vm.refresh();
                 msgs.addSuccess('Ciclo de pagamento excluido!')
+                vm.refresh();
             }).catch(function (e) {
                 msgs.addError(e)
             })
@@ -100,10 +99,10 @@
             vm.debt = 0
 
             if(vm.billingCycle){
-                vm.billingCycle.credits.forEach(function({value}){
+                vm.billingCycle.creditos.forEach(function({value}){
                     vm.credit += !value || isNaN(value) ? 0 : parseFloat(value)
                 })
-                vm.billingCycle.debts.forEach(function({value}){
+                vm.billingCycle.debitos.forEach(function({value}){
                     vm.debt += !value || isNaN(value) ? 0 : parseFloat(value)
                 })
             }

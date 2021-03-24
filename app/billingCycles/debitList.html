@@ -9,7 +9,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="debt in bcCtrl.billingCycle.debts">
+        <tr ng-repeat="debt in bcCtrl.billingCycle.debitos">
           <td>
             <input ng-model="debt.name" class="form-control" placeholder="Informe o Nome"
             ng-readony="bcCtrl.tabDelete">
@@ -20,7 +20,7 @@
           </td>
           <td>
             <input ng-model="debt.status" class="form-control" placeholder="Informe o status"
-            ng-readony="bcCtrl.tabDelete" type="number">
+            ng-readony="bcCtrl.tabDelete">
           </td>
           <td class="table-actions">
             <button type="button" class="btn btn-success" ng-disabled="bcCtrl.tabDelete"
